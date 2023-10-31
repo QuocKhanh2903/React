@@ -1,6 +1,8 @@
 import { Card, CardImg, CardImgOverlay, CardText, CardBody,
     CardTitle } from 'reactstrap';
 import DishdetailComponent from './DishdetailComponent';    
+import React, { Component } from 'react';
+
 
 
 class Menu extends Component {
@@ -39,6 +41,8 @@ class Menu extends Component {
       );
     }
   }
+
+
     
 
 export default Menu;
