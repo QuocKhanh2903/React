@@ -54,6 +54,18 @@ function renderComments(comments) {
 
     
 }
+
+function RenderDish({dish}) {
+  
+}
+
+function RenderComments({comments}) {
+  
+}
+
+const DishDetail = (props) => {
+  
+}
        
 
     
