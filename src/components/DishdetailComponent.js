@@ -22,11 +22,11 @@ return(
 );
 }
 
-function RenderComments({comments}) {
+function RenderComments({comments, addComment, dishId}) {
   if (comments == null) {
     return(<div></div>);
 }
-const showcmnts = comments.map((cmnt) => {
+const showComments = comments.map((cmnt) => {
     return(
         <li key={cmnt.id}>
             <p>{cmnt.comment}</p>
@@ -41,6 +41,15 @@ const showcmnts = comments.map((cmnt) => {
         </li>
     );
 });
+
+
+return (
+    <div className="col-12 col-md-8 m-1">
+        <h4> Comments </h4>
+        <ul className="list-unstyled">{showComments}</ul>
+    </div>
+);
+
 }
 
 const DishDetail = (props) => {
