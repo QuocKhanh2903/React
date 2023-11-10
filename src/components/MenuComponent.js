@@ -4,6 +4,7 @@ import { Card, CardImg, CardImgOverlay,
     CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import DishDetail from './DishdetailComponent';
+import { Media, NavLink } from 'reactstrap';
 
 
 function RenderMenuItem ({dish, onClick}) {
@@ -24,7 +25,14 @@ const Menu = (props) => {
   const menu = props.dishes.map((dish) => {
       return (
           <div className="col-12 col-md-5 m-1"  key={dish.id}>
-              <RenderMenuItem dish={dish} onClick={props.onClick} />
+            <NavLink href={`/menu/${dish.id}`}>
+                <Card>
+                    <CardImg width="100%" src={dish.image} alt={dish.name} />
+                    <CardImgOverlay>
+                        <CardTitle>{dish.name}</CardTitle>
+                    </CardImgOverlay>
+                </Card>
+            </NavLink>
           </div>
       );
   });
